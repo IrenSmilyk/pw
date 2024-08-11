@@ -6,6 +6,7 @@ test('Add product to the cart', async ({ page }) => {
     await page.locator('[data-test="username"]').fill('standard_user');
     await page.locator('[data-test="password"]').fill('secret_sauce');
     await page.locator('[data-test="login-button"]').click();
+    await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 
     const firstProductName = await page.locator('[data-test="inventory-item"]:first-of-type .inventory_item_name').textContent();
     await page.locator('[data-test="inventory-item"]:first-of-type button').click();
@@ -13,6 +14,7 @@ test('Add product to the cart', async ({ page }) => {
     await expect(page.locator('.shopping_cart_badge')).toHaveText('1');
     
     await page.locator('.shopping_cart_link').click();
+    await expect(page).toHaveURL('https://www.saucedemo.com/cart.html');
 
     const cartProductName = await page.locator('.cart_item .inventory_item_name').textContent();
     expect(cartProductName).toBe(firstProductName);  
