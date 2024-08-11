@@ -1,0 +1,21 @@
+{
+  "name": "pw",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrenSmilyk/pw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrenSmilyk/pw/issues"
+  },
+  "homepage": "https://github.com/IrenSmilyk/pw#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^22.1.0"
+  }
+}
